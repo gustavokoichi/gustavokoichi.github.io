@@ -28,3 +28,25 @@ body {
 .contact-item img:hover {
   opacity: 0.8;
 }
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.tags ul,
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.github-build-item {
+  padding-right: 40px;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
