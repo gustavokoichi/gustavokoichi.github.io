@@ -13,8 +13,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
     <br />
     <section class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lang-wrap">
+            <a href="#" language="portuguese" class="active">
+              <img class="brazil-flag" src="https://i.imgur.com/FUVveiO.png" alt="Brazilian flag">
+            </a>
+            <a href="#" language="english">
+              <img class="united-kingdom-flag" src="https://i.imgur.com/RNCYbFE.png" alt="United Kingdom flag">
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-3">
           <div class="card card-body border-info h-100" id="profile-wrapper">
@@ -24,32 +38,25 @@
               alt="profile picture"
             />
             <hr />
-            <h4>Hi, I'm Gustavo</h4>
-            <p>Developer</p>
+            <h4 class="profile-title">Hi, I'm Gustavo</h4>
+            <p class="profile-paragraph">Developer</p>
           </div>
         </div>
         
         <div class="col-md-9">
           <div class="card card-body border-info h-100">
-            <h4>About Me</h4>
+            <h4 class="about-me-title">About Me</h4>
             <hr />
             <p class="about-me-text">
               Hi, my name is Gustavo Koichi, I'm 30-year-old professional 
               transitioning from 3 years in the Tourism Specialist to a 
               career as Developer.
-              Fascineted by problem-solving which I do celebrate even the 
+              Fascinated by problem-solving which I do celebrate even the 
               tiniest ones and build digital products that I can say 
-              "I was part of it".
-            </p>
-            <p class="about-me-text">
-              I've dedicated the past year (2024) only focusing in 
+              'I was part of it'. I've dedicated the past year (2024) only focusing in 
               learning an creating projects with 
-              <span class="about-me-python">Python</span> and 
-              <span class="about-me-django">Django</span>. 
-              Beyond these I'm eager to explore 
-              other languages/frameworks as 
-              <span class="about-me-java">Java</span> and 
-              <span class="about-me-springboot">Springboot</span>.
+              Python and Django. Beyond these I'm eager to explore other 
+              languages/frameworks such as Java and Springboot.
             </p>
 
             <div class="contact-item">
@@ -81,7 +88,7 @@
         <div class="col-md-6">
           <div class="card card-body h-100">
             <h3>Project Happy</h3>
-            <p>Website to see doggos, release some dopamine and make your day better.</p>
+            <p class="project-happy-description">Website to see doggos, release some dopamine and make your day better.</p>
             <img class="project-img" src="https://i.imgur.com/e96xbdD.jpg" alt="project happy picture">
             <ul class="tags">
               <li><img class="tag-item" alt="Static Badge" src="https://img.shields.io/badge/%20HTML-orangered"></li>
@@ -100,7 +107,7 @@
         <div class="col-md-6">
           <div class="card card-body h-100">
             <h3>Project Weather</h3>
-            <p>Check city weather and temperature within a Command Line Interface (CLI).</p>
+            <p class="project-weather-description">Check city weather and temperature within a Command Line Interface (CLI).</p>
             <img class="project-img" src="https://i.imgur.com/6jpxGD2.jpg" alt="project weather picture">
             <ul class="tags">
               <li><img class="tag-item" alt="Static Badge" src="https://img.shields.io/badge/Python-%23FFD700"></li>
@@ -134,28 +141,84 @@
         <div class="col-md-6">
           <div class="card card-body h-100">
             <h3>Soft skills</h3>
-            <ul class="skills-title">
-              <li>Highly emotionally intelligent. 
-                Skilled communicator and mentor.
-                Detail oriented and methodical.
-                Agile and results-oriented.
-                Creative problem solver.
-                Collaborative and approachable.
-                Team-worker.</li>
-            </ul>
+            <p class="soft-skills-description">
+              Highly emotionally intelligent. 
+              Skilled communicator and mentor.
+              Detail oriented and methodical.
+              Agile and results-oriented.
+              Creative problem solver.
+              Collaborative and approachable.
+              Team-worker.
+            </p>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="card card-body h-100">
             <h3>Hard skills</h3>
-            <ul class="skills">
-              <li>Python. Django. PostgreS. HTML. CSS. 
-                Bootstrap 4. REST knowledge.</li>
+            <p class="hard-skills-description">Python. Django. PostgreS. 
+              HTML. CSS. Git. Bootstrap 4. REST and APIs knowledge.
+            </p>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      const langEl = document.querySelector('.lang-wrap');
+      const link = document.querySelectorAll('a');
+      const profileTitle = document.querySelector('.profile-title');
+      const profileParagraph = document.querySelector('.profile-paragraph');
+      const aboutMeTitle = document.querySelector('.about-me-title');
+      const aboutMeText = document.querySelector('.about-me-text');
+      const projectHappyDescription = document.querySelector('.project-happy-description');
+      const projectWeatherDescription = document.querySelector('.project-weather-description');
+      const softSkillsDescription = document.querySelector('.soft-skills-description');
+      const hardSkillsDescription = document.querySelector('.hard-skills-description');
+
+      link.forEach(element => {
+        element.addEventListener('click', () => {
+          langEl.querySelector('.active').classList.remove('active');
+          element.classList.add('active');
+
+          const attr = element.getAttribute('language');
+
+          profileTitle.textContent = data[attr].profiletitle;
+          profileParagraph.textContent = data[attr].profileparagraph;
+          aboutMeTitle.textContent = data[attr].aboutmetitle;
+          aboutMeText.textContent = data[attr].aboutmetext;
+          projectHappyDescription.textContent = data[attr].projecthappydescription;
+          projectWeatherDescription.textContent = data[attr].projectweatherdescription;
+          softSkillsDescription.textContent = data[attr].softskillsdescription;
+          hardSkillsDescription.textContent = data[attr].hardskillsdescription;
+        })
+      })
+
+      var data = {
+          "portuguese":
+          {
+              "profiletitle":"Oi, eu sou Gustavo",
+              "profileparagraph":"Desenvolvedor",
+              "aboutmetitle":"Sobre mim",
+              "aboutmetext":"Olá, meu nome é Gustavo Koichi, tenho 30 anos e estou atualmente transicionando da carreira de Tursimo no qual estou inserido à 3 anos para a de Desenvolvedor. Sou fascinado por resolver problemas nos quais sempre celebro mesmo as pequenas vitórias e gosto bastante de criar produtos digitais aos quais eu possa falar 'eu fiz parte disso'. Dediquei o ano de 2024 somente a aprender e criar projetos com Python e Django. Além desses, estou ansioso para explorar outras linguagens/frameworks como Java e Springboot por exemplo",
+              "projecthappydescription":"Site para ver cachorrinhos, liberar alguma dopamina e fazer seu dia mais feliz.",
+              "projectweatherdescription":"Verifique o clima e a temperatura da sua cidade através de uma interface de comando.",
+              "softskillsdescription":"Alta inteligência emocional. Comunicador e mentor habilidoso. Deatalhista e metódico. Ágil e orientado a resultados. Solucionador de problemas criativo. Colaborativo e acessível. Trabalho em equipe",
+              "hardskillsdescription":"Python. Django. PostgreS. HTML. CSS. Git. Bootstrap 4. Conhecimento em REST e consumo de APIs."
+          },
+          "english":
+          {
+              "profiletitle":"Hi, I'm Gustavo",
+              "profileparagraph":"Developer",
+              "aboutmetitle":"About me",
+              "aboutmetext":"Hi, my name is Gustavo Koichi, I'm 30-year-old professional transitioning from 3 years in the Tourism Specialist to a career as Developer. Fascinated by problem-solving which I do celebrate even the tiniest ones and build digital products that I can say 'I was part of it'. I've dedicated 2024 to focusing in learning and creating projects with Python and Django. Beyond these I'm eager to explore other languages/frameworks such as Java and Springboot.",
+              "projecthappydescription":"Website to see doggos, release some dopamine and make your day better.",
+              "projectweatherdescription":"Check city weather and temperature within a Command Line Interface (CLI).",
+              "softskillsdescription":"Highly emotionally intelligent. Skilled communicator and mentor. Detail oriented and methodical. Agile and results-oriented. Creative problem solver. Collaborative and approachable. Team-worker.",
+              "hardskillsdescription":"Python. Django. PostgreS. HTML. CSS. Git. Bootstrap 4. REST and APIs knowledge."
+          }
+      }
+    </script>
 
     <footer>
       <p>&copy; 2024 Gustavo Koichi</p>

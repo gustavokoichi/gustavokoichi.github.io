@@ -2,6 +2,30 @@ body {
   background-color: #f8f8f8 !important;
 }
 
+.lang-wrap {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 5px;
+}
+
+.brazil-flag,
+.united-kingdom-flag {
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 36px;
+  max-height: 36px;
+  padding-left: 5px;
+}
+
+.brazil-flag:hover,
+.united-kingdom-flag:hover {
+  transform: scale(1.1);
+}
+
+a.active {
+  transform: scale(1.2);
+}
+
 #profile-wrapper {
   text-align: center;
 }
@@ -83,7 +107,8 @@ li {
   padding-right: 40px;
 }
 
-.skills-title {
+.soft-skills-description,
+.hard-skills-description {
   text-align: justify;
 }
 
