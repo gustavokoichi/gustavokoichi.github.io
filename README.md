@@ -5,5 +5,5 @@ ENGLISH
 
 PORTGUÊS
 
-<p>Repositório do projeto em que criei meu próprio portfólio que pode ser visitado em <a href="https://gustavokoichi.github.io/">HERE</a>.</p>
+<p>Repositório do projeto em que criei meu próprio portfólio que pode ser visitado <a href="https://gustavokoichi.github.io/">AQUI</a>.</p>
 <p>Têm versão em inglês e português.</p>
