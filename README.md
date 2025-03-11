@@ -1,9 +1,9 @@
 ENGLISH
 
-<p>Repository from project to create my portfolio that can be visited <a href="https://gustavokoichi.github.io/">HERE</a>.</p>
-<p>It has english and portguese version.</p>
+<p>Portfolio's repository. Link: <a href="https://gustavokoichi.github.io/">HERE</a>.</p>
+<p>It has english and portuguese version.</p>
 
 PORTGUÊS
 
-<p>Repositório do projeto em que criei meu próprio portfólio que pode ser visitado <a href="https://gustavokoichi.github.io/">AQUI</a>.</p>
+<p>Repositório meu portfólio. Link: <a href="https://gustavokoichi.github.io/">AQUI</a>.</p>
 <p>Têm versão em inglês e português.</p>
